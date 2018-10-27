@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HappeyBirthday</string>
+    <string name="errorToast">can not open the app, try restart</string>
+    <string name="show_birthday_screen">Show birthday screen</string>
+    <string name="user_name"> - </string>
+    <string name="cur_date">10/27/18</string>
+</resources>

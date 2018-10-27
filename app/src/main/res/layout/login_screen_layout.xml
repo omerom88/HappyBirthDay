@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/red_nanit"
+        android:textSize="30sp"
+        android:id="@+id/app_name_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/name_tv"
+        />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:id="@+id/name_tv"
+        android:textSize="24sp"
+        android:textColor="@color/red_nanit"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:cursorVisible="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name_tv"
+        app:layout_constraintBottom_toTopOf="@+id/birth_date"
+        android:inputType="textPersonName"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/birth_date"
+        android:text="@string/cur_date"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv"
+        app:layout_constraintBottom_toTopOf="@+id/user_picture"
+        android:background="@color/red_nanit"
+        android:textColor="@android:color/white"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_nanit"
+        android:src="@drawable/ic_photo_white"
+        android:id="@+id/user_picture"
+        android:padding="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date"
+        app:layout_constraintBottom_toTopOf="@+id/show_birthday_button"
+        tools:ignore="ContentDescription"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_birthday_button"
+        android:text="@string/show_birthday_screen"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_picture"
+        android:background="@color/red_nanit"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
