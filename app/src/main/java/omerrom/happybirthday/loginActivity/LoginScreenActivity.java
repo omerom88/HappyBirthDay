@@ -48,7 +48,6 @@ public class LoginScreenActivity extends AppCompatActivity implements LoginScree
         presenter.attach();
     }
 
-
     @Override
     public void onStart() {
         super.onStart();
