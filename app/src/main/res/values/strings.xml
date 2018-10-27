@@ -2,6 +2,20 @@
     <string name="app_name">HappeyBirthday</string>
     <string name="errorToast">can not open the app, try restart</string>
     <string name="show_birthday_screen">Show birthday screen</string>
-    <string name="user_name"> - </string>
+    <string name="user_name">Name</string>
     <string name="cur_date">10/27/18</string>
+    <string name="date_picker">date picker</string>
+    <string name="date_no_valid">Date Not Valid</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_library">Choose from Library</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="image_flag">image/*</string>
+    <string name="select_file">Select File</string>
+    <string name="def_name">Name</string>
+    <string name="def_year">Year</string>
+    <string name="def_month">Month</string>
+    <string name="def_day">Day</string>
+    <string name="def_url">url</string>
+    <string name="no_string" />
 </resources>
