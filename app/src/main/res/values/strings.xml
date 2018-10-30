@@ -2,7 +2,6 @@
     <string name="app_name">HappeyBirthday</string>
     <string name="errorToast">can not open the app, try restart</string>
     <string name="show_birthday_screen">Show birthday screen</string>
-    <string name="user_name">Name</string>
     <string name="cur_date">10/27/18</string>
     <string name="date_picker">date picker</string>
     <string name="date_no_valid">Date Not Valid</string>
@@ -18,4 +17,17 @@
     <string name="def_day">Day</string>
     <string name="def_url">url</string>
     <string name="no_string" />
+    <string name="share_the_news">Share the news</string>
+    <string name="months_old">months old!</string>
+    <string name="years_old">years old!</string>
+    <string name="today_is">today is</string>
+    <string name="close_window">X</string>
+    <string name="def_name_chose">def_name_chose</string>
+    <string name="def_date_chose">def_name_chose</string>
+    <string name="no_name">Name</string>
+    <string name="Choose_from_Library">Choose from Library</string>
+    <string name="permission_necessary">Permission necessary</string>
+    <string name="external_storage_permission">External storage permission is necessary</string>
+    <string name="today">today </string>
+    <string name="is">is</string>
 </resources>

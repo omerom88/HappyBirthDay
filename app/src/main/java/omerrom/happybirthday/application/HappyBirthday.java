@@ -2,7 +2,6 @@ package omerrom.happybirthday.application;
 
 
 import android.app.Application;
-
 import io.reactivex.annotations.NonNull;
 import omerrom.happybirthday.injection.AppComponent;
 import omerrom.happybirthday.injection.AppModule;
@@ -11,7 +10,7 @@ import omerrom.happybirthday.injection.HappyBirthdayModule;
 
 
 /**
- * Created by omerom88 on 13-Sep-18
+ * Created by omerom88 on 23-Oct-18
  */
 public class HappyBirthday extends Application {
 
@@ -21,8 +20,6 @@ public class HappyBirthday extends Application {
     public void onCreate() {
         super.onCreate();
         appComponent = initDagger();
-
-
     }
 
     @NonNull

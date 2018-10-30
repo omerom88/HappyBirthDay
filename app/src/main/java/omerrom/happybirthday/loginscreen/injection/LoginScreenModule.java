@@ -1,14 +1,13 @@
-package omerrom.happybirthday.loginActivity.injection;
+package omerrom.happybirthday.loginscreen.injection;
 
 import dagger.Module;
 import dagger.Provides;
-import omerrom.happybirthday.loginActivity.LoginScreenContract;
-import omerrom.happybirthday.loginActivity.LoginScreenPresenter;
+import omerrom.happybirthday.loginscreen.LoginScreenContract;
+import omerrom.happybirthday.loginscreen.LoginScreenPresenter;
 
 /**
- * Created by omerom88 on 13-Sep-18
+ * Created by omerom88 on 23-Oct-18
  */
-
 @Module
 public class LoginScreenModule {
 

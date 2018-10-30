@@ -6,12 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import omerrom.happybirthday.R;
-import omerrom.happybirthday.loginActivity.LoginScreenActivity;
+import omerrom.happybirthday.loginscreen.LoginScreenActivity;
 
+
+/**
+ * Created by omerom88 on 23-Oct-18
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +24,6 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(new Intent(this, LoginScreenActivity.class), REQUEST_CODE);
 
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
