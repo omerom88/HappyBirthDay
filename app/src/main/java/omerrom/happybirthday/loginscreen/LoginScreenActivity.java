@@ -21,11 +21,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
 import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -35,10 +41,11 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import omerrom.happybirthday.R;
 import omerrom.happybirthday.application.HappyBirthday;
+import omerrom.happybirthday.birthdatescreen.BirthDateScreenActivity;
 import omerrom.happybirthday.data.UserProfile;
 import omerrom.happybirthday.loginscreen.injection.LoginScreenModule;
-import omerrom.happybirthday.birthdatescreen.BirthDateScreenActivity;
 import omerrom.happybirthday.utils.AppPermissions;
+
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 
@@ -50,6 +57,8 @@ public class LoginScreenActivity extends AppCompatActivity implements LoginScree
     private static final int REQUEST_CAMERA = 1;
 
     private static final int SELECT_FILE = 2;
+    public static final int CAMERA_ICON_PAD = 150;
+    public static final int NO_PAD = 0;
 
     private CompositeDisposable compositeDisposable;
 
@@ -436,15 +445,24 @@ public class LoginScreenActivity extends AppCompatActivity implements LoginScree
 
     private void setUserPictureBackground() {
         userPicture.setBackgroundColor(Color.TRANSPARENT);
+        userPicture.setPadding(NO_PAD,NO_PAD,NO_PAD,NO_PAD);
     }
 
     private void setNoImageFound() {
-        userPicture.setImageResource(R.drawable.ic_photo_white);
         userPicture.setBackgroundColor(getColor(R.color.red_nanit));
+        userPicture.setImageResource(R.drawable.ic_photo_white);
+        userPicture.setPadding(CAMERA_ICON_PAD,CAMERA_ICON_PAD,CAMERA_ICON_PAD,CAMERA_ICON_PAD);
     }
 
     private void showImageWithGlide(String selectedImage) {
-        Glide.with(this).load(selectedImage).into(userPicture);
+        Glide.with(this)
+                .load(selectedImage)
+                .apply(new RequestOptions()
+                        .placeholder(R.color.red_nanit)
+                        .fitCenter()
+                        .dontAnimate()
+                        .diskCacheStrategy(DiskCacheStrategy.ALL))
+                .into(userPicture);
     }
 
     private void saveUserPicture(String selectedImage) {

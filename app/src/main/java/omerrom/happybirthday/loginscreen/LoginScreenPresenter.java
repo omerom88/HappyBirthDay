@@ -228,7 +228,6 @@ public class LoginScreenPresenter implements LoginScreenContract.UserActionsList
 
     }
 
-
     private void showDateText(Calendar calendar) {
         view.setDateText(calendar);
     }
