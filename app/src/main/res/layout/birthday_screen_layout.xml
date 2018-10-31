@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    >
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/close_window"
+        android:id="@+id/close_screen"
+        android:textSize="20sp"
+        android:textColor="@color/red_nanit"
+        android:background="@android:color/transparent"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/default_place_holder_yellow" />
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/android_elephant_popup"
+        android:id="@+id/layout_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/share_button"
+        android:background="@drawable/btn_share"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_image"
+        android:layout_marginBottom="20dp"
+        android:text="@string/share_the_news"
+        android:gravity="start|center"
+        android:paddingStart="10dp"
+        android:paddingBottom="4dp"
+        android:textSize="16sp"
+        android:textColor="@color/red_nanit"
+        tools:ignore="RtlSymmetry" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share_pink"
+        app:layout_constraintTop_toTopOf="@+id/share_button"
+        app:layout_constraintBottom_toBottomOf="@id/share_button"
+        app:layout_constraintEnd_toEndOf="@id/share_button"
+        android:layout_marginEnd="10dp"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/months_old"
+        android:id="@+id/lower_text"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_nanit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/share_button"
+        android:layout_marginBottom="10dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/n1"
+        android:id="@+id/age_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lower_text"
+        android:layout_marginBottom="10dp"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_swirls"
+        android:id="@+id/left_swirl"
+        app:layout_constraintTop_toTopOf="@+id/age_number"
+        app:layout_constraintBottom_toBottomOf="@+id/age_number"
+        app:layout_constraintEnd_toStartOf="@id/age_number"
+        android:layout_marginEnd="20dp"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right_swirls"
+        android:id="@+id/right_swirl"
+        app:layout_constraintTop_toTopOf="@+id/age_number"
+        app:layout_constraintBottom_toBottomOf="@+id/age_number"
+        app:layout_constraintStart_toEndOf="@id/age_number"
+        android:layout_marginStart="20dp"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/today_is"
+        android:lines="2"
+        android:id="@+id/upper_text"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_nanit"
+        app:layout_constraintStart_toStartOf="@id/left_swirl"
+        app:layout_constraintEnd_toEndOf="@id/right_swirl"
+        app:layout_constraintBottom_toTopOf="@+id/age_number"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
